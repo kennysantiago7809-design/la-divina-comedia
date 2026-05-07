@@ -1,0 +1,318 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #f8fbff;
+    background:
+        linear-gradient(180deg, rgba(5, 12, 24, 0.34), rgba(5, 10, 22, 0.9)),
+        url("../imagenes/fn_id.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 72px;
+    padding: 14px 22px;
+    background: rgba(5, 20, 43, 0.86);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    z-index: 10;
+}
+
+.menu button {
+    padding: 11px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    cursor: pointer;
+    font-weight: 700;
+    letter-spacing: 0;
+    transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.menu button:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.menu .activo {
+    color: #10213a;
+    background: linear-gradient(135deg, #fff2bd, #d9a441);
+    box-shadow: 0 10px 28px rgba(217, 164, 65, 0.28);
+}
+
+.btn-infierno:hover {
+    box-shadow: 0 10px 28px rgba(204, 0, 0, 0.28);
+    background: rgba(204, 0, 0, 0.72);
+}
+
+.btn-purgatorio:hover {
+    box-shadow: 0 10px 28px rgba(190, 202, 214, 0.22);
+    background: rgba(102, 102, 102, 0.74);
+}
+
+.btn-paraiso:hover {
+    box-shadow: 0 10px 28px rgba(217, 164, 65, 0.28);
+    background: rgba(178, 124, 39, 0.76);
+}
+
+main {
+    width: min(1120px, calc(100% - 36px));
+    margin: 0 auto;
+    padding: 118px 0 56px;
+}
+
+.hero {
+    min-height: 240px;
+    padding: 28px;
+    border-radius: 8px;
+    display: grid;
+    align-content: end;
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.06)),
+        rgba(8, 22, 44, 0.62);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 26px 70px rgba(0, 0, 0, 0.36);
+}
+
+.etiqueta {
+    width: fit-content;
+    margin-bottom: 16px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    color: #10213a;
+    background: linear-gradient(135deg, #fff2bd, #d9a441);
+    font-size: 0.86rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+h1 {
+    max-width: 850px;
+    font-size: clamp(1.9rem, 4vw, 3.25rem);
+    line-height: 1;
+    letter-spacing: 0;
+    text-shadow: 0 8px 28px rgba(0, 0, 0, 0.34);
+}
+
+.subtitulo {
+    max-width: 760px;
+    margin-top: 18px;
+    color: #e7f2ff;
+    font-size: clamp(1.05rem, 2vw, 1.24rem);
+    line-height: 1.65;
+}
+
+.contenido {
+    margin: 28px 0 34px;
+    padding: 28px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
+}
+
+.contenido p {
+    max-width: 940px;
+    color: #eef8ff;
+    font-size: clamp(1.04rem, 2vw, 1.18rem);
+    line-height: 1.75;
+}
+
+.seccion-titulo {
+    margin: 38px 0 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 18px;
+}
+
+.seccion-titulo h2 {
+    font-size: clamp(1.6rem, 3vw, 2.25rem);
+}
+
+.seccion-titulo p {
+    max-width: 430px;
+    color: #cfe8ff;
+    line-height: 1.5;
+}
+
+.bloques {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.bloque {
+    min-height: 360px;
+    overflow: hidden;
+    border-radius: 8px;
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 16px 38px rgba(0, 0, 0, 0.22);
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.bloque:hover {
+    transform: translateY(-7px);
+    border-color: rgba(255, 246, 201, 0.52);
+}
+
+.imagen {
+    min-height: 150px;
+    background-size: cover;
+    background-position: center;
+}
+
+.infierno .imagen {
+    background-image: linear-gradient(rgba(70, 0, 0, 0.2), rgba(12, 6, 6, 0.68)), url("../imagenes/fonfo_inf.jpg");
+}
+
+.purgatorio .imagen {
+    background-image: linear-gradient(rgba(70, 70, 84, 0.12), rgba(12, 14, 20, 0.68)), url("../imagenes/fondo_pur.jpg");
+}
+
+.paraiso .imagen {
+    background-image: linear-gradient(rgba(255, 242, 189, 0.22), rgba(72, 49, 21, 0.62)), url("../imagenes/fondo_cie.jpg");
+}
+
+.texto {
+    padding: 22px;
+}
+
+.texto span {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #fff6c9;
+    font-size: 0.86rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.texto h3 {
+    margin-bottom: 12px;
+    font-size: 1.45rem;
+}
+
+.texto p {
+    color: #ddecff;
+    line-height: 1.58;
+    font-size: 1rem;
+}
+
+.texto button {
+    margin-top: 18px;
+    padding: 10px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 999px;
+    color: white;
+    background: rgba(255, 255, 255, 0.12);
+    cursor: pointer;
+    font-weight: 800;
+    transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.texto button:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.creditos {
+    margin-top: 34px;
+    padding: 26px 28px;
+    border-radius: 8px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
+}
+
+.creditos h2 {
+    margin-bottom: 10px;
+    color: #fff6c9;
+    font-size: clamp(1.35rem, 2vw, 1.8rem);
+}
+
+.creditos p {
+    color: #eef8ff;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.creditos ul {
+    width: fit-content;
+    margin: 14px auto 0;
+    padding-left: 20px;
+    color: #eef8ff;
+    text-align: left;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.creditos li::marker {
+    color: #fff6c9;
+}
+
+@media (max-width: 900px) {
+    .bloques {
+        grid-template-columns: 1fr;
+    }
+
+    .bloque {
+        min-height: auto;
+    }
+
+    .seccion-titulo {
+        display: block;
+    }
+
+    .seccion-titulo p {
+        margin-top: 8px;
+    }
+}
+
+@media (max-width: 620px) {
+    body {
+        background-attachment: scroll;
+    }
+
+    .menu {
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .menu button {
+        padding: 9px 10px;
+        font-size: 0.88rem;
+    }
+
+    main {
+        width: min(100% - 24px, 1120px);
+        padding-top: 104px;
+    }
+
+    .hero {
+        min-height: 220px;
+        padding: 22px 18px;
+    }
+
+    .contenido {
+        padding: 22px;
+    }
+}
